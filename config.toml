@@ -1,0 +1,113 @@
+ # Below are all the sections and options you can have in
+ ~/.streamlit/config.toml.
+
+
+[global]
+
+# By default, Streamlit displays a warning when a user sets both a widget
+# default value in the function defining the widget and a widget value via
+# the widget's key in `st.session_state`.
+
+# If you'd like to turn off this warning, set this to True.
+
+# Default: false
+# disableWidgetStateDuplicationWarning = false
+
+# If True, will show a warning when you run a Streamlit-enabled script
+# via "python my_script.py".
+
+# Default: true
+# showWarningOnDirectExecution = true
+
+
+[logger]
+
+# Level of logging: 'error', 'warning', 'info', or 'debug'.
+
+# Default: 'info'
+# level = "info"
+
+# String format for logging messages. If logger.datetimeFormat is set,
+# logger messages will default to `%(asctime)s.%(msecs)03d %(message)s`. See
+# [Python's documentation](https://docs.python.org/2.6/library/logging.html#formatter-objects)
+# for available attributes.
+
+# Default: "%(asctime)s %(message)s"
+# messageFormat = "%(asctime)s %(message)s"
+
+
+[client]
+
+# Controls whether uncaught app exceptions and deprecation warnings
+# are displayed in the browser. By default, this is set to True and
+# Streamlit displays app exceptions and associated tracebacks, and
+# deprecation warnings, in the browser.
+
+# If set to False, deprecation warnings and full exception messages
+# will print to the console only. Exceptions will still display in the
+# browser with a generic error message. For now, the exception type and
+# traceback show in the browser also, but they will be removed in the
+# future.
+
+# Default: true
+# showErrorDetails = true
+
+# Change the visibility of items in the toolbar, options menu,
+# and settings dialog (top right of the app).
+
+# Allowed values:
+# * "auto" : Show the developer options if the app is accessed through
+# localhost or through Streamlit Community Cloud as a developer.
+# Hide them otherwise.
+# * "developer" : Show the developer options.
+# * "viewer" : Hide the developer options.
+# * "minimal" : Show only options set externally (e.g. through
+# Streamlit Community Cloud) or through st.set_page_config.
+# If there are no options left, hide the menu.
+
+# Default: "auto"
+# toolbarMode = "auto"
+
+# Controls whether the default sidebar page navigation in a multi-page app is displayed.
+
+# Default: true
+# showSidebarNavigation = true
+
+
+[runner]
+
+# Allows you to type a variable or string by itself in a single line of
+# Python code to write it to the app.
+
+# Default: true
+# magicEnabled = true
+
+# Handle script rerun requests immediately, rather than waiting for script
+# execution to reach a yield point. This makes Streamlit much more
+# responsive to user interaction, but it can lead to race conditions in
+# apps that mutate session_state data outside of explicit session_state
+# assignment statements.
+
+# Default: true
+# fastReruns = true
+
+# Raise an exception after adding unserializable data to Session State.
+# Some execution environments may require serializing all data in Session
+# State, so it may be useful to detect incompatibility during development,
+# or when the execution environment will stop supporting it in the future.
+
+# Default: false
+# enforceSerializableSessionState = false
+
+# Adjust how certain 'options' widgets like radio, selectbox, and
+# multiselect coerce Enum members when the Enum class gets
+# re-defined during a script re-run.
+
+# Allowed values:
+# * "off": Disables Enum coercion.
+# * "nameOnly": Enum classes can be coerced if their member names match.
+# * "nameAndValue": Enum classes can be coerced if their member names AND
+# member values match.
+
+# Default: "nameOnly"
+# enumCoercion = "nameOnly"
