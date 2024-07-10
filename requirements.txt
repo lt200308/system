@@ -59,7 +59,6 @@ conda-content-trust
 conda-libmamba-solver 
 conda-pack 
 conda-package-handling 
-conda-repo-cli==1.0.75
 conda-token 
 conda-verify==3.4.2
 conda_index 
